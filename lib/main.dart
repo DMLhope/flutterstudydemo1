@@ -32,17 +32,27 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(//scaffold也是material里面带的一个小部件，包含了一些material风格页面常用的一些页面组件，例如页面顶部或者底部的工具栏
-        backgroundColor: Colors.grey[100],
-        appBar: AppBar(//顶部工具栏
-          title: Text(
+    var appBar2 = AppBar(//顶部工具栏
+          leading: IconButton(
+            icon: Icon(Icons.menu),
+            tooltip: 'Navigration',
+            onPressed: null,
+          ),
+          
+          title: Center(
+           child:Text(
             'DML',
             style: TextStyle(
               color: Colors.black87
             ),
           ),
+          
+          ),
           elevation: 20.0,//顶部工具栏下方的阴影面积设置
-        ),
+        );
+    return Scaffold(//scaffold也是material里面带的一个小部件，包含了一些material风格页面常用的一些页面组件，例如页面顶部或者底部的工具栏
+        backgroundColor: Colors.grey[100],
+        appBar: appBar2,
         body: null
       );
   }
