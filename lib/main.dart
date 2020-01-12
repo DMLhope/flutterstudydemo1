@@ -36,18 +36,16 @@ class Home extends StatelessWidget {
           leading: IconButton(
             icon: Icon(Icons.menu),
             tooltip: 'Navigration',
-            onPressed: null,
+            onPressed: ()=>debugPrint("navigration button is pressed"),//给他一个回调，在激活的时候执行在控制台输出
           ),
-          
-          title: Center(
-           child:Text(
-            'DML',
-            style: TextStyle(
-              color: Colors.black87
-            ),
+          title:Text('DML'),
+          actions: <Widget>[
+            IconButton(
+            icon: Icon(Icons.search),
+            tooltip: 'Search',
+            onPressed: ()=>debugPrint("search button is pressed"),//给他一个回调，在激活的时候执行在控制台输出
           ),
-          
-          ),
+          ],
           elevation: 20.0,//顶部工具栏下方的阴影面积设置
         );
     return Scaffold(//scaffold也是material里面带的一个小部件，包含了一些material风格页面常用的一些页面组件，例如页面顶部或者底部的工具栏
